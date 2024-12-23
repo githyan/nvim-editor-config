@@ -2,7 +2,7 @@
 
 This configuration loads 21 plugins that is made using packer to apply all related needed as following by packer status. <br>
 final look
-![Alt text](asset/ "a title")
+![Alt text](assets/2024-12-24-05:54:55.png "a title") ![Alt text](assets/2024-12-24-06:41:13.png "a title")
 - comment.nvim
 - Luasnip
 - cmp-nvim-lsp
