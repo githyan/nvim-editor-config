@@ -44,7 +44,7 @@ as code editing like commenting and move around up and above is setting up by `C
  * `<Ctrl>h :ui.nav_file(1)`
  * `<Ctrl>l :ui.nav_file(2)`
  * `<Ctrl>n :ui.nav_file(3)`
- * `<Ctrl>s :ui.nav_file(4)`
+ * `<Ctrl>s :ui.nav_file(4)`<br>
  Telescope :
  * `<leader>ff :find_files`
  * `<leader>fg :live_grep`
