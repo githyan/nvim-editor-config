@@ -1,6 +1,8 @@
 # My basic need config neovim for workflows
 
-This configuration loads 21 plugins that is made using packer to apply all related needed as following by packer status.
+This configuration loads 21 plugins that is made using packer to apply all related needed as following by packer status. <br>
+final look
+![Alt text](asset/ "a title")
 - comment.nvim
 - Luasnip
 - cmp-nvim-lsp
