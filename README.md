@@ -22,7 +22,7 @@ This configuration loads 21 plugins that is made using packer to apply all relat
 - undotree
 - vim-fugitive
 
-for making the workflows more be easier that supports program develop efficiency in normal mode by various keybindings considered following :
+for making the workflows more be easier that supports program develop efficiency in normal mode by various keybindings <br>considered following :
 
 * `<leader> = space`
 * `<leader>s :w<CR>`
@@ -32,11 +32,11 @@ for making the workflows more be easier that supports program develop efficiency
 * `<leader>dl :NvimTreeToggle<CR>`
 * `<leader>j :<C-w><Left>`
 * `<leader>k :<C-w><Right>`
-* `<leader><Ctrl-u> :vim.cmd.UndotreeToggle`
+* `<leader><Ctrl-u> :vim.cmd.UndotreeToggle`<br>
 as code editing like commenting and move around up and above is setting up by `Ctrl` following by:
 
 * `<ctrl>/ = commenting`
-* `<ctrl>_ = commenting in 'x' mode` except in normal mode I used `gc` to give a block comment in current line 
+* `<ctrl>_ = commenting in 'x' mode` except in normal mode I used `gc` to give a block comment in current line <br>
  
  for harpoon (see this document from theprimeagen's github)[https://github.com/Theprimeagen/harpoon]
  * `<leader>p :mark.add_file`
