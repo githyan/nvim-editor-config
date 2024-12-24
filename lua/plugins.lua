@@ -66,6 +66,7 @@ return require('packer').startup(function(use)
          'nvim-tree/nvim-web-devicons'
       },
    }
+   use 'andweeb/presence.nvim'
     use {
         'nvimdev/dashboard-nvim',
         event = 'VimEnter',

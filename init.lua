@@ -12,4 +12,4 @@ require "config.options"
 require "config.telescope"
 require "config.treesitter"
 require "config.undotree"
-
+require "presences.discord"
