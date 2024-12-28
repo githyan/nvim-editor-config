@@ -1,5 +1,7 @@
 -- all requires for autocompletes language server protocols 
 --
+require("luasnip.loaders.from_vscode").lazy_load()
+
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local lspconfig = require("lspconfig")
 
