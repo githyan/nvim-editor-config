@@ -90,8 +90,14 @@ _G.packer_plugins = {
     path = "/home/archaen/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["conform.nvim"] = {
+    config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fconform\frequire\0" },
+    loaded = true,
+    path = "/home/archaen/.local/share/nvim/site/pack/packer/start/conform.nvim",
+    url = "https://github.com/stevearc/conform.nvim"
+  },
   ["dashboard-nvim"] = {
-    config = { "\27LJ\2\n�\3\0\0\6\0\r\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0034\4\5\0005\5\a\0>\5\1\0045\5\b\0>\5\2\0045\5\t\0>\5\3\0045\5\n\0>\5\4\4=\4\v\3=\3\f\2B\0\2\1K\0\1\0\vconfig\rshortcut\1\0\4\vaction\23Telescope dotfiles\bkey\6d\ngroup\vNumber\tdesc\17 dotfiles\1\0\4\vaction\18Telescope app\bkey\6a\ngroup\19DiagnosticHint\tdesc\r Apps\1\0\6\vaction\25Telescope find_files\bkey\6f\ficon_hl\14@variable\tdesc\nFiles\ticon\t \ngroup\nLabel\1\0\4\vaction\15PackerSync\bkey\6u\ngroup\14@property\tdesc\16󰊳 Update\16week_header\1\0\2\16week_header\0\rshortcut\0\1\0\1\venable\2\1\0\2\ntheme\nhyper\vconfig\0\nsetup\14dashboard\frequire\0" },
+    config = { "\27LJ\2\n�\3\0\0\6\0\r\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0034\4\5\0005\5\a\0>\5\1\0045\5\b\0>\5\2\0045\5\t\0>\5\3\0045\5\n\0>\5\4\4=\4\v\3=\3\f\2B\0\2\1K\0\1\0\vconfig\rshortcut\1\0\4\tdesc\17 dotfiles\vaction\23Telescope dotfiles\ngroup\vNumber\bkey\6d\1\0\4\tdesc\r Apps\vaction\18Telescope app\ngroup\19DiagnosticHint\bkey\6a\1\0\6\tdesc\nFiles\ficon_hl\14@variable\ngroup\nLabel\vaction\25Telescope find_files\ticon\t \bkey\6f\1\0\4\tdesc\16󰊳 Update\vaction\15PackerSync\ngroup\14@property\bkey\6u\16week_header\1\0\2\rshortcut\0\16week_header\0\1\0\1\venable\2\1\0\2\vconfig\0\ntheme\nhyper\nsetup\14dashboard\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -107,6 +113,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/archaen/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
+  },
+  ["lspkind.nvim"] = {
+    loaded = true,
+    path = "/home/archaen/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
+    url = "https://github.com/onsails/lspkind.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -191,6 +202,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: conform.nvim
+time([[Config for conform.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fconform\frequire\0", "config", "conform.nvim")
+time([[Config for conform.nvim]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")

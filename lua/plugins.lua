@@ -27,6 +27,7 @@ return require('packer').startup(function(use)
        "neovim/nvim-lspconfig",
        'hrsh7th/cmp-nvim-lsp',
        'hrsh7th/nvim-cmp',
+       "onsails/lspkind.nvim",
         'L3MON4D3/LuaSnip',
        config = function()
           require("mason").setup({
@@ -47,6 +48,7 @@ return require('packer').startup(function(use)
       'nvim-treesitter/nvim-treesitter',
       run = function()
          local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+         ts_update()
       end
    }
    use { "nvim-treesitter/playground" }
@@ -66,8 +68,14 @@ return require('packer').startup(function(use)
          'nvim-tree/nvim-web-devicons'
       },
    }
+   use {
+       "stevearc/conform.nvim",
+       config = function ()
+           require("conform").setup()
+       end,
+   }
    use 'andweeb/presence.nvim'
-    use {
+   use {
         'nvimdev/dashboard-nvim',
         event = 'VimEnter',
         config = function ()

@@ -1,33 +1,48 @@
-local M = {}
-M.icons = {
-  Class = " ",
-  Color = " ",
-  Constant = " ",
-  Constructor = " ",
-  Enum = " ",
-  EnumMember = " ",
-  Field = "󰄶 ",
-  File = " ",
-  Folder = " ",
-  Function = " ",
-  Interface = "󰜰",
-  Keyword = "󰌆 ",
-  Method = "ƒ ",
-  Module = "󰏗 ",
-  Property = " ",
-  Snippet = "󰘍 ",
-  Struct = " ",
-  Text = " ",
-  Unit = " ",
-  Value = "󰎠 ",
-  Variable = " "
+local kind_icons = {
+  Text = "",
+  Method = "󰆧",
+  Function = "󰊕",
+  Constructor = "",
+  Field = "󰇽",
+  Variable = "󰂡",
+  Class = "󰠱",
+  Interface = "",
+  Module = "",
+  Property = "󰜢",
+  Unit = "",
+  Value = "󰎠",
+  Enum = "",
+  Keyword = "󰌋",
+  Snippet = "",
+  Color = "󰏘",
+  File = "󰈙",
+  Reference = "",
+  Folder = "󰉋",
+  EnumMember = "",
+  Constant = "󰏿",
+  Struct = "",
+  Event = "",
+  Operator = "󰆕",
+  TypeParameter = "󰅲",
 }
 
-function M.setup()
-    local kinds = vim.lsp.protocol.CompletionItemKind
-    for i, kind in ipairs(kinds) do
-        kinds[i] = M.icons[kind] or kind
-    end
-end
+require("cmp").setup({
+  window = {
+    completion = {
+      winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+      col_offset = -3,
+      side_padding = 0,
+    },
+  },
+  formatting = {
+    fields = { "kind", "abbr", "menu" },
+    format = function(entry, vim_item)
+      local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
+      local strings = vim.split(kind.kind, "%s", { trimempty = true })
+      kind.kind = " " .. (strings[1] or "") .. " "
+      kind.menu = "    (" .. (strings[2] or "") .. ")"
 
-return M
+      return kind
+    end,
+  },
+})
