@@ -51,6 +51,5 @@ keymaps('i', '[', '[]<left>')
 keymaps('i', '(', '()<left>')
 keymaps("i", "'", "''<left>")
 
-
-
-
+-- vim fugitive keybindings
+-- keymaps('n', '<leader>gs', vim.cmd.git)

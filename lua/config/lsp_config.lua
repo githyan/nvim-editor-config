@@ -1,19 +1,3 @@
-local cmp = require('cmp')
-
-cmp.setup({
-    sources = {
-        { name = 'nvim_lsp' },
-        { name = 'buffer'},
-    },
-    snippet = {
-        expand = function(args)
-            require('luasnip').lsp_expand(args.body)
-        end,
-    },
-    mapping = cmp.mapping.preset.insert({
-        ['<CR>'] = cmp.mapping.confirm({select = false}),
-    }),
-})
 -- Reserve a space in the gutter
 -- This will avoid an annoying layout shift in the screen
 vim.opt.signcolumn = 'yes'
@@ -68,15 +52,3 @@ require('mason-lspconfig').setup({
     }
 })
 
-require 'lspconfig'.pyright.setup {}
-require 'lspconfig'.clangd.setup({
-    sources = {
-        { name = 'nvim_lsp' },
-        { name = 'buffer'},
-    },
-    mapping = cmp.mapping.preset.insert({
-        ['<CR>'] = cmp.mapping.confirm({select = true}),
-        -- ["<CR>"] = cmp.mapping.select_next_item({select = true})
-    }),
-})
-require 'lspconfig'.lua_ls.setup {}
