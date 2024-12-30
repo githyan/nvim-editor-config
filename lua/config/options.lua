@@ -3,3 +3,5 @@
 -- Add any additional options here
 
 vim.g.lazyvim_php_lsp = "intelephense"
+vim.opt.relativenumber = true
+vim.opt.clipboard = "unnamedplus"
